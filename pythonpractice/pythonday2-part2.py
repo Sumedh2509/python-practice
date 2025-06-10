@@ -124,7 +124,7 @@ elif  temp1< 28 and temp>0 and is_sunny:
 
 
 #conditional expression , ternary operators!
-
+#the general formuls is - X if condition else Y
 num =5 
 print("positive" if num>0 else "negative" )
 
