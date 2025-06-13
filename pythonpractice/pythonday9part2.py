@@ -33,7 +33,7 @@ if __name__ == '__main__':   #this checks if we are running this file, which in 
 def show_balance(balance):
     print(f"Your current balance is ${balance:.2f}")
 
-def deposit():
+def deposit(balance):
     deposit_amt = float(input("Enter the amount you want to deposit: " ))
     if deposit_amt >= 0:
          return deposit_amt
@@ -68,13 +68,13 @@ def main():
         user_input = input("Please choose option (1-4): ")
 
         if user_input == "1":
-            show_balance()
+            show_balance(balance)
 
         elif user_input == "2":
-            balance += deposit()
+            balance += deposit(balance)
         
         elif user_input == "3":
-            balance -= withdraw()
+            balance -= withdraw(balance)
         
         elif user_input == "4":
             is_running = False
@@ -83,3 +83,6 @@ def main():
             print("Invalid input")
 
     print("Thanks , Have a nice day!")
+
+if __name__ == '__main__':
+    main()
