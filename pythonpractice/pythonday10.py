@@ -37,7 +37,7 @@ def get_payout(row , bet):
 
 def main():
     balance  = 100
-    print(f"Welcome to the python slot your initial balance is {balance}")
+    print(f"Welcome to the pythofn slot your initial balance is {balance}")
     while balance>0:
         print(f"Your current balance is {balance}")
         bet = input("Enter the amount you want to bet: ")
