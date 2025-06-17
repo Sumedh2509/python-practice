@@ -9,7 +9,7 @@ random.shuffle(key)
 #Encrypting
 def encrypt():
 
-    plain_text = input("Please enter the message you want to encrypt:  ")
+    plain_text = input("Plesase enter the message you want to encrypt:  ")
     encrypted_text = ""
 
     for letter in plain_text:
