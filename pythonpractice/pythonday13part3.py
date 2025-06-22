@@ -57,6 +57,7 @@ class Animal:
         print(f"This {self.name} is eating")
     def sleep(self):
         print(f"This {self.name} is sleeping")
+
 class Prey(Animal):
     def flee(self):
         print(f"This {self.name} is fleeing")
