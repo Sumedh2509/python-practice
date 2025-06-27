@@ -17,9 +17,21 @@ class Book:
     def __lt__(self, other):
         return self.num_pages < other.num_pages
 
+    def __add__ (self, other):
+        return f"{self.num_pages + other.num_pages} pages"
     
-
+    def __contains__(self, keyword):
+        return keyword in self.title or keyword in self.author
     
+    def __getitem__ (self, key):
+        if key == "title":
+            return self.title
+        elif key == "author":
+            return self.author
+        elif key == "num_pages":
+            return self.num_pages
+        else:
+            return f"Key {key} was not found"
     
 book1 = Book("The Hobbit", "J.R.R. Tolkien", 310)
 book2 = Book("Haryy Potter and the Philosopher's stone", "J.K. Rowling", 223)
@@ -29,3 +41,12 @@ book4 = Book("The Lion, the Witch and the Wardrobe", "C.S. Lewis", 172)
 print(book1)  #as we know this gives memeoryh address
 print(book3 == book4) #even if they had the same attributes python returns a False
 print (book2 < book3)  #this ofc throws an error in normal case , excpet it doesn't cuz of our __lt__
+
+print (book2 + book3)
+print ("Lion" in book1)  #cuz of __contains__  doesn't throw error and gives False
+print ("Lion" in book3)   # Gives True
+
+print (book2['title']) #works cuz of __getitem__ , gives name of book 
+print (book3['author'])
+print (book3['num_pages'])
+print (book3['Audio'])
